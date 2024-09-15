@@ -12,7 +12,7 @@ namespace PW_4_Semenov_Ryabchenko
     {
         private static Queue<string> expressions = new Queue<string>(); // Списки для хранения последних 3 выражений  
         private static Queue<double> results = new Queue<double>();
-        private const int maxMemorySize = 3;
+        private const int max = 3;
 
         static void Main(string[] args)
         {
@@ -64,7 +64,7 @@ namespace PW_4_Semenov_Ryabchenko
         }
         static void SaveResult(string expression, double result)
         {
-            if (expressions.Count >= maxMemorySize)
+            if (expressions.Count >= max)
             {
                 expressions.Dequeue(); // Удаляем самое старое выражение  
                 results.Dequeue();     // Удаляем самый старый результат  
