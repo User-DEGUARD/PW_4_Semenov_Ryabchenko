@@ -12,7 +12,7 @@ namespace PW_4_Semenov_Ryabchenko
     {
         private static Queue<string> expressions = new Queue<string>(); // Списки для хранения последних 3 выражений  
         private static Queue<double> results = new Queue<double>();
-        private const int max = 3;
+        private const int maxMemory = 3;
 
         static void Main(string[] args)
         {
@@ -20,7 +20,7 @@ namespace PW_4_Semenov_Ryabchenko
             Console.WriteLine("Добро пожаловать в калькулятор!");
             Console.WriteLine("Нажмите 'e' для выхода.");
             LoadMemory(); // Загружаем прошлые выражения и результаты  
-            int expressionCount = 1; // Счетчик выражений  
+            int expression = 1; // Счетчик выражений  
             while (true)
             {
                 Console.Write($"Введите {expressionCount} выражение: ");
